@@ -741,6 +741,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "openssl-src"
+version = "111.16.0+1.1.1l"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7ab2173f69416cf3ec12debb5823d244127d23a9b127d5a5189aa97c5fa2859f"
+dependencies = [
+ "cc",
+]
+
+[[package]]
 name = "openssl-sys"
 version = "0.9.67"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -749,6 +758,7 @@ dependencies = [
  "autocfg",
  "cc",
  "libc",
+ "openssl-src",
  "pkg-config",
  "vcpkg",
 ]
@@ -1424,7 +1434,7 @@ checksum = "85e60b0d1b5f99db2556934e21937020776a5d31520bf169e851ac44e6420214"
 [[package]]
 name = "yes-or-no"
 version = "0.1.0"
-source = "git+https://github.com/BrainiumLLC/yes-or-no?rev=0596341d926f7c39c542cefe0c26fc504daa327c#0596341d926f7c39c542cefe0c26fc504daa327c"
+source = "git+https://github.com/BrainiumLLC/yes-or-no#0596341d926f7c39c542cefe0c26fc504daa327c"
 dependencies = [
  "proc-macro2",
  "quote",

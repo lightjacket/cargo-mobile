@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 use structopt::clap::arg_enum;
 use yes_or_no::yes_or_no;
 
-yes_or_no!(NonInteractive);
+yes_or_no!(pub NonInteractive);
 
 #[derive(Clone, Copy, Debug, Deserialize, Eq, Ord, PartialEq, PartialOrd, Serialize)]
 pub enum NoiseLevel {
@@ -39,13 +39,13 @@ impl NoiseLevel {
     }
 }
 
-yes_or_no!(ForceColor);
+yes_or_no!(pub ForceColor);
 
-yes_or_no!(SkipDevTools);
+yes_or_no!(pub SkipDevTools);
 
-yes_or_no!(ReinstallDeps);
+yes_or_no!(pub ReinstallDeps);
 
-yes_or_no!(OpenInEditor);
+yes_or_no!(pub OpenInEditor);
 
 #[derive(Clone, Copy, Debug, Deserialize, Eq, PartialEq, Serialize)]
 pub enum Profile {
@@ -77,6 +77,17 @@ impl Profile {
         }
     }
 }
+
+/*
+If you need to have openssl@3 first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/openssl@3/bin:$PATH"' >> ~/.zshrc
+  echo 'export LDFLAGS="-L/usr/local/opt/openssl@3/lib"' >> ~/.zshrc
+  echo 'export CPPFLAGS="-I/usr/local/opt/openssl@3/include"' >> ~/.zshrc
+
+For compilers to find openssl@3 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@3/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@3/include"
+ */
 
 arg_enum! {
     /// Android device logging filter level, used as an argument for run
