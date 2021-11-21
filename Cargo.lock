@@ -1424,7 +1424,7 @@ checksum = "85e60b0d1b5f99db2556934e21937020776a5d31520bf169e851ac44e6420214"
 [[package]]
 name = "yes-or-no"
 version = "0.1.0"
-source = "git+https://github.com/BrainiumLLC/yes-or-no?rev=784acb28da7c82a011648cae39266efc29cd0714#0596341d926f7c39c542cefe0c26fc504daa327c"
+source = "git+https://github.com/BrainiumLLC/yes-or-no?rev=0596341d926f7c39c542cefe0c26fc504daa327c#0596341d926f7c39c542cefe0c26fc504daa327c"
 dependencies = [
  "proc-macro2",
  "quote",
